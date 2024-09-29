@@ -3,14 +3,25 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "lint": "eslint ."
   },
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^22.7.4",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
     "dotenv": "^16.4.5",
+    "eslint": "^9.11.1",
     "express": "^4.21.0",
     "mongodb": "^6.9.0",
     "mongoose": "^8.7.0",
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.11.1",
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.7.0"
   }
 }
