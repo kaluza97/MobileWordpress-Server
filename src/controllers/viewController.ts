@@ -5,11 +5,10 @@ export const getAllViews = async (_req: Request, res: Response): Promise<void> =
     try {
         const view = await View.find();
 
-        res.status(200).json(view)
-
+        res.status(200).json(view);
     }
     catch (error) {
-        res.status(500).json({ message: 'Error fetching data.', error });
+        res.status(500).json({ message: 'Error fetching view.', error });
     }
 };
 

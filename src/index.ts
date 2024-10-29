@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import viewRoutes from './routes/viewRoutes';
+import settingsRoutes from './routes/settingsRoutes';
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 9000;
 app.use(cors());
 app.use(express.json());
 app.use('/api/views', viewRoutes);
+app.use('/api/settings', settingsRoutes);
 
 mongoose.connect(process.env.MONGODB_URI || '')
     .then(() => console.log('Connected to MongoDB Atlas'))
