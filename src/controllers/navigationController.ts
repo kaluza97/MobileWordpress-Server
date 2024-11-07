@@ -3,7 +3,7 @@ import Navigation from '../models/navigationModel';
 
 export const getNavigation = async (_req: Request, res: Response): Promise<void> => {
     try {
-        const navigation = await Navigation.find();
+        const navigation = await Navigation.findOne();
 
         res.status(200).json(navigation);
     }
