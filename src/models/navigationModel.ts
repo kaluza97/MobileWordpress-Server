@@ -1,17 +1,16 @@
 import { Schema, model } from 'mongoose';
 
-const settingsSchema = new Schema({
+const navigationSchema = new Schema({
     name: { type: String, required: true },
     icon: { type: String, required: true },
     view: { type: String, required: true },
 });
 
-const navigationSchema = new Schema({
-    header: [{ type: String }],
-    content: [{ type: String }],
-    navigation: [settingsSchema],
+
+const settingsSchema = new Schema({
+    navigation: [navigationSchema],
 });
 
-const Navigation = model('Navigation', navigationSchema);
+const Navigation = model('Navigation', settingsSchema);
 
 export default Navigation;
