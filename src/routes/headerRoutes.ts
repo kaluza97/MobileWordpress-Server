@@ -1,10 +1,10 @@
-import { Router } from 'express';
-import { getHeader, updateHeader } from '../controllers/headerController';
+import { Router } from "express";
+import { getHeader, updateHeader } from "../controllers/headerController";
 
 const router = Router();
 
-router.get('/', getHeader);
+router.get("/", getHeader);
 
-router.patch('/', updateHeader);
+router.post("/", updateHeader);
 
 export default router;
