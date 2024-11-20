@@ -10,22 +10,7 @@ dotenv.config();
 
 const app: Application = express();
 
-const configureCors = () => {
-    const allowedOrigins = ['https://mobile-wordpress-web.vercel.app/'];
-
-    return cors({
-        origin: (origin, callback) => {
-            if (!origin || allowedOrigins.includes(origin)) {
-                callback(null, origin);
-            } else {
-                callback(new Error('Not allowed by CORS'));
-            }
-        },
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    });
-};
-
-app.use(configureCors());
+app.use(cors());
 app.use(express.json());
 app.use('/api/views', viewRoutes);
 app.use('/api/settings/navigation', navigationRoutes);
