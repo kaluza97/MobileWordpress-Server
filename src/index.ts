@@ -20,4 +20,5 @@ mongoose.connect(process.env.MONGODB_URI || '')
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch((error: Error) => console.error(error));
 
-app.use(express.static("public")) 
+app.use(express.static("public"))
+
