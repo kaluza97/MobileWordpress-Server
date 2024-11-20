@@ -9,12 +9,15 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "index.ts"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/api/(.*)",
+            "dest": "src/index.ts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "DELETE",
+                "OPTIONS"
+            ],
             "headers": [
                 {
                     "key": "Access-Control-Allow-Credentials",
