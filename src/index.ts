@@ -9,7 +9,6 @@ import headerRoutes from './routes/headerRoutes';
 dotenv.config();
 
 const app: Application = express();
-const PORT = process.env.PORT || 9000;
 
 const configureCors = () => {
     const allowedOrigins = ['https://mobile-wordpress-web.vercel.app/'];
@@ -36,6 +35,4 @@ mongoose.connect(process.env.MONGODB_URI || '')
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch((error: Error) => console.error(error));
 
-app.listen(PORT, () => {
-    console.log(`Server running on port: ${PORT}`);
-});
+app.use(express.static("public")) 
