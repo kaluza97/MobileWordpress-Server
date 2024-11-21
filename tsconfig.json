@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "commonjs",
-    "rootDir": "./src",
+    "rootDir": "./api",
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
@@ -11,7 +11,8 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/cors.js"
+    "src/cors.js",
+    "api/index.ts"
   ],
   "exclude": [
     "node_modules"
