@@ -1,4 +1,4 @@
-import express, { Application } from 'express';
+import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
@@ -8,7 +8,7 @@ import headerRoutes from './routes/headerRoutes';
 
 dotenv.config();
 
-const app: Application = express();
+const app = express();
 
 let corsOptions = {
     origin: ["https://mobile-wordpress-web.vercel.app/", "https://mobile-wordpress-server.vercel.app/"],
@@ -27,7 +27,7 @@ app.get('/', (_req, res) => {
 
 mongoose.connect(process.env.MONGODB_URI || '')
     .then(() => console.log("Connected to MongoDB"))
-    .catch((error: Error) => console.error(error));
+    .catch((error) => console.error(error));
 
 
 export default app;

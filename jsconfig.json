@@ -10,9 +10,9 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/**/*.ts",
+    "src/**/*.js",
     "src/cors.js",
-    "api/index.ts"
+    "api/index.js"
   ],
   "exclude": [
     "node_modules"
