@@ -17,9 +17,9 @@ let corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use('/api/views', viewRoutes);
-app.use('/api/settings/navigation', navigationRoutes);
-app.use('/api/settings/header', headerRoutes);
+app.use('/views', viewRoutes);
+app.use('/settings/navigation', navigationRoutes);
+app.use('/settings/header', headerRoutes);
 
 app.get('/', (_req, res) => {
     res.send('Your Node.js server is working properly!')
