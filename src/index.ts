@@ -22,7 +22,8 @@ app.get('/', (_req, res) => {
 })
 
 mongoose.connect(process.env.MONGODB_URI || '')
-    .then(() => app.listen(9000, () => console.log("Server ready on port 9000.")))
+    .then(() => console.log("Connected to MongoDB"))
     .catch((error: Error) => console.error(error));
+
 
 export default app;
