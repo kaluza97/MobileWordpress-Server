@@ -1,9 +1,14 @@
 # mobile-app-builder-server
 
-Create a `.env` file in the "src" directory:
+### You can test the server API at this link:  
+https://mobile-wordpress-server.vercel.app/
 
-PORT=9000
-MONGODB_URI=YOUR_MONGODB_KEY
+### Views can be found at the following URL:  
+https://mobile-wordpress-server.vercel.app/api/views
 
-You can generate the MongoDB key at the following address:
-https://www.mongodb.com/cloud/atlas/register
+### Header can be found at the following URL:  
+https://mobile-wordpress-server.vercel.app/api/settings/header
+
+### Navigation can be found at the following URL:  
+https://mobile-wordpress-server.vercel.app/api/settings/navigation
+
