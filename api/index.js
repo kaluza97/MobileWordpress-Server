@@ -10,8 +10,9 @@ dotenv.config();
 
 const app = express();
 
-let corsOptions = {
-    origin: ["https://mobile-wordpress-web.vercel.app/", "https://mobile-wordpress-server.vercel.app/"],
+const corsOptions = {
+    origin: ["https://mobile-wordpress-web.vercel.app"],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
 };
 
 app.use(cors(corsOptions));
