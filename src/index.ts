@@ -5,13 +5,20 @@ import dotenv from 'dotenv';
 import viewRoutes from './routes/viewRoutes';
 import navigationRoutes from './routes/navigationRoutes';
 import headerRoutes from './routes/headerRoutes';
+import { Router } from 'express';
 
 dotenv.config();
 
 const app: Application = express();
+const router = Router();
 
 app.use(cors());
 app.use(express.json());
+
+router.get('/', (_req, res) => {
+    res.send('Views API working!');
+});
+
 
 app.use('/api/views', viewRoutes);
 app.use('/api/settings/navigation', navigationRoutes);
