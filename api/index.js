@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-    origin: ["https://mobile-wordpress-web.vercel.app"],
+    origin: ["https://mobile-wordpress-web.vercel.app", 'http://localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
 };
 
